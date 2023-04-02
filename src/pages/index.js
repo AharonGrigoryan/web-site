@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import Menu from '../components/menu'
-import Hero from '../components/hero'
-import './home.css'
+import Hero from "../components/Hero";
+import "./home.css";
+import "../style.css";
+import Menu from "../components/Menu";
 
 const Home = (props) => {
   return (
@@ -20,7 +21,7 @@ const Home = (props) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

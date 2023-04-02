@@ -1,19 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import DangerousHTML from 'dangerous-html/react'
-import PropTypes from 'prop-types'
+import logo from "../../src/images/logo.svg";
 
-import './menu.css'
+import "./menu.css";
 
-const Menu = (props) => {
+const Menu = () => {
   return (
-    <div className={`menu-menu ${props.rootClassName} `}>
+    <div className={`menu-menu menu-root-class-name `}>
       <div id="mobile-menu" className="menu-mobile-navigation">
-        <img alt={props.Logo_alt} src={props.Logo_src} className="menu-logo" />
+        <img alt="logo-home" src={logo} className="menu-logo" />
         <div className="menu-links">
-          <span className="Link">{props.text}</span>
-          <span className="Link">{props.text1}</span>
-          <span className="Link">{props.text2}</span>
+          <span className="Link">Solutions</span>
+          <span className="Link">How it works</span>
+          <span className="Link">Prices</span>
         </div>
         <div id="close-mobile-menu" className="menu-close-mobile-menu">
           <svg viewBox="0 0 804.5714285714286 1024" className="menu-icon">
@@ -27,21 +26,17 @@ const Menu = (props) => {
       <div className="menu-desktop-navigation">
         <nav className="menu-centered">
           <div className="menu-left">
-            <img
-              alt={props.Logo_alt1}
-              src={props.Logo_src1}
-              className="menu-logo1"
-            />
+            <img alt="hero-logo" src={logo} className="menu-logo1" />
             <div className="menu-links1">
-              <span className="Link">{props.text3}</span>
-              <span className="Link">{props.text4}</span>
-              <span className="Link">{props.text5}</span>
+              <span className="Link">Solutions</span>
+              <span className="Link">How it works</span>
+              <span className="Link">Prices</span>
             </div>
           </div>
           <div className="menu-right">
-            <span className="menu-sign-in Link">{props.Sign_In}</span>
+            <span className="menu-sign-in Link">Sign In</span>
             <div className="menu-get-started">
-              <span className="menu-text6">{props.text6}</span>
+              <span className="menu-text6">Gallery</span>
             </div>
             <div className="menu-container">
               <svg viewBox="0 0 877.7142857142857 1024" className="menu-icon2">
@@ -55,67 +50,9 @@ const Menu = (props) => {
           </div>
         </nav>
       </div>
-      <div className="">
-        <DangerousHTML
-          html={`<script>
-/*
-Mobile menu - Code Embed
-*/
-
-// Mobile menu
-const mobileMenu = document.querySelector("#mobile-menu")
-
-// Buttons
-const closeButton = document.querySelector("#close-mobile-menu")
-const openButton = document.querySelector("#open-mobile-menu")
-
-// On openButton click, set the mobileMenu position left to -100vw
-openButton.addEventListener("click", function() {
-    mobileMenu.style.transform = "translateX(0%)"
-})
-
-// On closeButton click, set the mobileMenu position to 0vw
-closeButton.addEventListener("click", function() {
-    mobileMenu.style.transform = "translateX(100%)"
-})
-</script>`}
-          className=""
-        ></DangerousHTML>
-      </div>
+      <div></div>
     </div>
-  )
-}
+  );
+};
 
-Menu.defaultProps = {
-  Logo_src: '/playground_assets/pastedimage-74q7-1500h.png',
-  Logo_alt: 'pastedImage',
-  text: 'Solutions',
-  text1: 'How it works',
-  text2: 'Prices',
-  Logo_src1: '/playground_assets/pastedimage-ektk-200h.png',
-  Logo_alt1: 'pastedImage',
-  Sign_In: 'Sign in',
-  text3: 'Solutions',
-  text4: 'How it works',
-  text5: 'Prices',
-  text6: 'Get started\n',
-  rootClassName: '',
-}
-
-Menu.propTypes = {
-  Logo_src: PropTypes.string,
-  Logo_alt: PropTypes.string,
-  text: PropTypes.string,
-  text1: PropTypes.string,
-  text2: PropTypes.string,
-  Logo_src1: PropTypes.string,
-  Logo_alt1: PropTypes.string,
-  Sign_In: PropTypes.string,
-  text3: PropTypes.string,
-  text4: PropTypes.string,
-  text5: PropTypes.string,
-  text6: PropTypes.string,
-  rootClassName: PropTypes.string,
-}
-
-export default Menu
+export default Menu;
